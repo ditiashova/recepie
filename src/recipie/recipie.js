@@ -1,6 +1,3 @@
-/**
- * Created by INNA on 18.04.2017.
- */
 const app = angular.module('recipieApp', ['ngRoute']);
 app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
