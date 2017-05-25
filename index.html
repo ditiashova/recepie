@@ -6,16 +6,29 @@
     <link rel="icon" type="image/png" href="images/logo-pie.png">
     <link rel="stylesheet" href="lib/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,700" rel="stylesheet">
 </head>
 <body>
-    <header class="horizontal-box">
-        <div><img src="images/logo-pie.png" alt="logo-for-app"></div>
-        <h3>reciPIE app</h3>
-    </header>
-    <h4>Simple app to manage meals in the restaurant</h4>
     <main class="container">
-
+        <div class="navbar navbar-default">
+            <div class="navbar-header">
+                <a class="logo navbar-brand" href="#!/">
+                    <img src="images/logo-pie.png" alt="logo-for-app">
+                </a>
+                <h3>reciPIE app</h3>
+            </div>
+            <div class="btn-group pull-right">
+                <a class="btn btn-danger" href="#!/">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                </a>
+                <a class="btn btn-info" href="#!/users">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+        <h4>Simple app to manage meals in the restaurant</h4>
+        <div ng-view=""></div>
     </main>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.load.min.js"></script>
     <script src="src/boot.js"></script>
