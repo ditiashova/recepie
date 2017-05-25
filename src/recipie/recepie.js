@@ -1,4 +1,9 @@
-const app = angular.module('recipieApp', ['ngRoute']);
+let app = angular.module('recipieApp', [
+    'ngRoute',
+    'ngMock',
+    'Recipe.RecipeBook',
+    'Recipe.Common'
+]);
 app.config(function ($routeProvider) {
     $routeProvider
         .when ('/',

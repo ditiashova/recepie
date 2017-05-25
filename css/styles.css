@@ -39,3 +39,14 @@ table th,
 td {
   padding: 10px;
 }
+.navbar {
+  padding: 10px;
+}
+.book-paper {
+  background-image: url("book-background.jpg");
+  width: auto;
+}
+.recipes-page,
+.recipe-page {
+  padding: 10px;
+}

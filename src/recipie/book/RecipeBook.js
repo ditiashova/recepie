@@ -1,1 +1,1 @@
-let recipeBookModule = angular.module('Recepie.RecipeBook', []);
+let recipeBookModule = angular.module('Recipe.RecipeBook', ['ngMock']);
