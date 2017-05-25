@@ -1,27 +1,27 @@
-const app = angular.module('recipieApp', ['ui.router']);
-app.config(function ($stateProvider) {
+const app = angular.module('recipieApp', ['ngRoute']);
+app.config(function ($routeProvider) {
     $routeProvider
         .when ('/',
             {
-                templateUrl: 'src/recipie/app/cook-book.html',
-                controller: 'CookBookCtrl',
-                controllerAs: 'cookBook'
+                templateUrl: 'src/recipie/book/tmpl/recipe-book.html',
+                controller: 'RecipeBookController',
+                controllerAs: 'recipeBook'
             })
         .when('/recipe/new', //when pressed on Add New button
             {
-                templateUrl: 'board/tmpl/recipe-edit.html',
+                templateUrl: 'book/tmpl/edit-recipe.tmpl.html',
                 controller: 'NewRecipeCtrl',
                 controllerAs: 'newRecipe'
             })
         .when('/recipe/:id', //when pressed on recipe itself
             {
-                templateUrl: 'board/tmpl/recipe.html',
+                templateUrl: 'book/tmpl/create-recipe.tmpl.html',
                 controller: 'SingleRecipeCtrl',
                 controllerAs: 'singleRecipe'
             })
         .when ('/recipe/edit/:id',
             {
-                templateUrl: 'board/tmpl/recipe-edit.html',
+                templateUrl: 'book/tmpl/edit-recipe.tmpl.html',
                 controller: 'EditRecipeCtrl',
                 controllerAs: 'editRecipe'
             })

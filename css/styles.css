@@ -1,22 +1,41 @@
-html {box-sizing: border-box; background:whitesmoke;}
-*, *:before, *:after {box-sizing: inherit;}
-body {font-family: 'Titillium Web', sans-serif;font-size: 20px;font-weight: 400;}
-
-.vertical-box {display: flex;flex-direction: column;}
-.horizontal-box {display: flex;flex-direction: row;}
-.centered-element {margin: auto; justify-content: center}
-
+html {
+  box-sizing: border-box;
+  background: whitesmoke;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+.vertical-box {
+  display: flex;
+  flex-direction: column;
+}
+.horizontal-box {
+  display: flex;
+  flex-direction: row;
+}
+.centered-element {
+  margin: auto;
+  justify-content: center;
+}
 .divider {
-    margin: 0 0 20px 0;
-    height: 10px;
-    border-bottom: 1px solid gainsboro;
+  margin: 0 0 20px 0;
+  height: 10px;
+  border-bottom: 1px solid gainsboro;
 }
 ul {
-    -webkit-padding-start: 0px;
+  -webkit-padding-start: 0px;
 }
 ul > li {
-    list-style-type: none;
+  list-style-type: none;
 }
-table th, td {
-    padding: 10px;
+table th,
+td {
+  padding: 10px;
 }
