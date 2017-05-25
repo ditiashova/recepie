@@ -1,5 +1,5 @@
-const app = angular.module('recipieApp', ['ngRoute']);
-app.config(['$routeProvider', function ($routeProvider) {
+const app = angular.module('recipieApp', ['ui.router']);
+app.config(function ($stateProvider) {
     $routeProvider
         .when ('/',
             {
@@ -26,4 +26,4 @@ app.config(['$routeProvider', function ($routeProvider) {
                 controllerAs: 'editRecipe'
             })
         .otherwise({redirectTo: '/'})
-}]);
+});
