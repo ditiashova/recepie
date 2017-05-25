@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,700" rel="stylesheet">
 </head>
 <body>
-    <main class="container">
+    <header class="container">
         <div class="navbar navbar-default">
             <div class="navbar-header">
                 <a class="logo navbar-brand" href="#!/">
@@ -28,8 +28,9 @@
             </div>
         </div>
         <h4>Simple app to manage meals in the restaurant</h4>
-        <div ng-view=""></div>
-    </main>
+    </header>
+<main class="container-fluid" ng-view=""></main>
+
     <script src="http://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.load.min.js"></script>
     <script src="src/boot.js"></script>
 </body>
