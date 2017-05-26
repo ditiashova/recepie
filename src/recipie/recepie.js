@@ -1,8 +1,5 @@
-let app = angular.module('recipieApp', [
-    'ngRoute',
-    'ngMock',
-    'Recipe.RecipeBook',
-    'Recipe.Common'
+let app = angular.module('reciPie', [
+    'ngRoute'
 ]);
 app.config(function ($routeProvider) {
     $routeProvider

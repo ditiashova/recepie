@@ -1,9 +1,60 @@
-<div class="book-paper">
-    <aside class="col-md-9 recipes-page">
-        <p></p>
-        Left
-    </aside>
-    <aside class="col-md-3 recipe-page">
-Right
-    </aside>
+<div class="row book-paper">
+
+        <aside class="col-md-9 recipes-page">
+            <div class="separated col-md-2 my-repeat-animation" ng-repeat="cuisine in ::recipeBook.cuisines" >
+                <h3>{{::cuisine.name}}</h3>
+                <hr/>
+                <div class="recipe" ng-repeat="recipe in recipeBook.recipes | filter: {cuisine:cuisine.name}"
+                     ng-click="recipeBook.setCurrentRecipe(recipe)">
+                    <article>
+                        <div>
+                            <button type="button" class="close" ng-click="recipeBook.deleteRecipe(recipe.id)">x</button>
+                            <h4 class="title" >{{recipe.title}}</h4>
+                        </div>
+                        <div class="type-bar {{recipe.cuisine}}"></div>
+                        <div>
+                            <h5>Responsible: {{recipe.cook}}</h5>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </aside>
+        <aside class="col-md-3 recipe-page">
+            <article class="recipe-details">
+                <h3>Recipe Details</h3>
+                <form name="recipeBook.detailsForm">
+                    <div class="form-group">
+                        <label class="control-label" for="inputTitle">*Title</label>
+                        <input class="form-control" type="text" id="inputTitle" name="inputTitle" placeholder="Title here"
+                               ng-model="recipeBook.editedRecipe.title">
+                        <label class="control-label" for="selectStatus">*Status</label>
+                        <select id="selectStatus" name="selectStatus" class="form-control"
+                                ng-model="storyboard.editedRecipe.status"
+                                ng-options="status.name as status.name for status in recipeBook.statuses"
+                                ng-required="true">
+                            <option value="">Select Status</option>
+                        </select>
+                        <label class="control-label" for="selectCuisine">*Cuisine</label>
+                        <select id="selectCuisine" name="selectCuisine" class="form-control"
+                                ng-model="storyboard.editedRecipe.cuisine"
+                                ng-options="cuisine.name as cuisine.name for cuisine in recipeBook.cuisines"
+                                ng-required="true">
+                            <option value="">Select Status</option>
+                        </select>
+                        <label class="control-label" for="inputDescription">Description</label>
+                        <textarea class="form-control" id="inputDescription" name="inputDescription" placeholder="Describe preferences if needed"
+                                  ng-model="recipeBook.editedRecipe.description"></textarea>
+                        <label class="control-label" for="inputCook">*Cook</label>
+                        <input class="form-control" type="text" id="inputCook" name="inputCook" placeholder="Cook name"
+                               ng-model="recipeBook.editedRecipe.cook">
+                        <label class="control-label" for="inputTime">*Time Required</label>
+                        <input class="form-control" type="text" id="inputTime" name="inputTime" placeholder="Enter required time"
+                                ng-model="recipeBook.editedRecipe.time">
+
+                    </div>
+
+                </form>
+            </article>
+        </aside>
+
 </div>

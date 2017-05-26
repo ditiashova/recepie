@@ -50,3 +50,43 @@ td {
 .recipe-page {
   padding: 10px;
 }
+.recipe-page {
+  background-color: rgba(255, 255, 204, 0.3);
+}
+.recipe-details {
+  padding-right: 10px;
+}
+.type-bar {
+  margin: 3px 0;
+  height: 3px;
+}
+.English {
+  background-color: darkred;
+}
+.French {
+  background-color: #4cae4c;
+}
+.Greek {
+  background-color: #31b0d5;
+}
+.American {
+  background-color: gold;
+}
+.Italian {
+  background-color: deeppink;
+}
+.recipe {
+  width: 100%;
+  background-color: whitesmoke;
+  color: #5e5e5e;
+  padding: 10px;
+  margin: 10px 0;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid saddlebrown;
+  margin: 1em 0;
+  padding: 0;
+}
